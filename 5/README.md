@@ -27,6 +27,12 @@ filas de la matriz de updates, y nos guardamos en la variable origen el primer e
 (tabla hash que almacena elementos únicos [como si fuera un cojunto de valores]), que almacena los nodos vecinos de origen, y find(destino) busca si destino está en 
 dicho conjunto. Si no está, devolvemos false, si está, seguimos con el siguiente update. Si hemos recorrido todos los updates y no hemos devuelto false, devolvemos true.
 
+## Justificación de por qué hemos elegido este problema entre el resto de retos del AoC
+Queríamos buscar un problema en el que se pudiera ver en el enunciado a simple vista que se puede utilizar grafos para resolverlo, y este problema era perfecto para ello debido
+al ejemplo que ilustra el enunciado del problema. Como ya hemos mencionado previamente, tras ver la sintaxis de las reglas (X|Y), nos dimos cuenta de que podíamos
+representarlas como enlaces de un grafo (X, Y). Además, dadas las actualizaciones, el enunciado del problema te explica con mucho detalle y te da pistas de poder usar
+un orden topológico para resolverlo.
+
 ## Valoración personal
 Una de las diferencias que podemos encontrar en el código final con respecto a los anteriores es el uso de size-t y ++i en vez de int y i++ en los bucles for, 
 lo cual es una buena práctica de programación en C++ que hemos podido descubrir a la hora de buscar la precaucion y la eficiencia en el código.
