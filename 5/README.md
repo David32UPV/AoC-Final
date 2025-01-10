@@ -1,6 +1,6 @@
 # Memoria día 5 del AoC
 ## Descripción básica del problema
-En el problema propuesto (hablamos de la primera estrella), nos piden que unas páginas deben ser impresar en un orden específico. Para ello nos dan una serie de reglas
+En el problema propuesto (hablamos de la primera estrella), nos piden que unas páginas deben ser impresas en un orden específico. Para ello nos dan una serie de reglas
 y unas actualizaciones (el orden de impresión de las páginas). Por ejemplo, si tenemos la regla 47|53, ésta nos indica que si los 2 numeros de página aparecen en una misma
 actualización, la página número 47 debe aparecer antes que la 53 en algún punto de la actualización. Siguiendo éstas indicaciones, debemos determinar los updates que son
 correctos, sacar el elemento del medio de dichos updates y sumarlos entre sí.
