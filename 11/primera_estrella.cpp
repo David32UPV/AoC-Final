@@ -97,20 +97,21 @@ long long calcularPiedras(long long tamano, int pestanyeos) {
 // Función principal para calcular el número total de piedras
 void numPiedrasTotales() {
     std::vector<int> piedras;
-    cargarArchivo(piedras);
+	try{
+    	cargarArchivo(piedras);
+	}catch(const std::exception& e){
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
 
     int num_blinking = 75;
     long long totalPiedras = 0;
 
-    try {
-        // Para cada tamaño de piedra, calculamos el número de piedras resultantes y lo sumamos al total
-        for (int tamano : piedras) {
-            totalPiedras += calcularPiedras(tamano, num_blinking);
-        }
-        std::cout << "Número de piedras totales: " << totalPiedras << std::endl;
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-    }
+	// Para cada tamaño de piedra, calculamos el número de piedras resultantes y lo sumamos al total
+	for (int tamano : piedras) {
+		totalPiedras += calcularPiedras(tamano, num_blinking);
+	}
+	std::cout << "Número de piedras totales: " << totalPiedras << std::endl;
+
 }
 
 int main() {
