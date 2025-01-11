@@ -79,7 +79,8 @@ long long calcularPiedras(long long tamano, int pestanyeos) {
 			// Usamos auto o std::pair para almacenar los valores de la división de la piedra (izquierda y derecha)
             auto [izquierda, derecha] = divisionPiedra(digitos);
 			// La llamada recursiva procesa primero la mitad izquierda de la piedra, y luego la mitad derecha, y al final se suman los resultados. Este esquema
-			// se asemeja a un recorrido en preorden de un árbol binario (recorrido en profundidad que va desde la raiz hasta las hojas (cuando pestanyeos == 0))
+			// se asemeja a un recorrido en preorden de un árbol binario (recorrido en profundidad que va desde la raiz hasta las hojas (cuando pestanyeos == 0)),
+			// pero en verdad usamos la técnica de Divide y Vencerás para dividir la piedra en mitades y procesarlas por separado.
             total += calcularPiedras(izquierda, pestanyeos - 1);
             total += calcularPiedras(derecha, pestanyeos - 1);
         } else {
