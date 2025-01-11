@@ -18,10 +18,8 @@ Tras esto, ordenamos los elementos situados a la izquierda del pivote, luego los
 el vector resultante ordenado de menor a mayor.
 
 ## Justificación de por qué hemos elegido este problema entre el resto de retos del AoC
-Durante los problemas que hemos ido resolviendo en el AoC, hemos ido viendo que se podía utilizar algo parecido a DyV para resolver ciertas partes de los mismos, pero 
-que no eran del todo DyV. Por ejemplo, en el día 11, cuando tenemos que dividir las piedras en 2 mitades, automáticamente puedes pensar en DyV, pero como ésto solo se
-aplica para unas piedras que cumplen una condicion y no para todas, no vimos la necesidad de aplicar recursividad ni una mezcla, luego al final no lo aplicamos. Como éste
-es el primer día del Advent of Code y se puede aplicar DyV de forma sencilla, nos decantamos por este problema para aplicar esta técnica algorítmica.
+Como éste es el primer día del Advent of Code y se puede aplicar DyV de forma sencilla, nos decantamos por este problema para aplicar esta técnica algorítmica. Sin embargo,
+en el día 11 también hemos aplicado Divide y Vencerás de una forma más elegante para que el programa fuera lo suficientemete eficiente como para poder resolver el problema.
 
 ## Valoración personal
 Finalmente, la resolución de este problema aplicando DyV nos ha dado el primer acelerón necesario para poder resolver los días posteriores del AoC con un 
