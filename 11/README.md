@@ -31,8 +31,10 @@ La función recursiva calcularPiedras() también la modificamos dentro de este n
 que el número total de piedras devuelto por la función iba a ser muy grande, por lo que éste no cabe en un int. Por ello, tuvimos que cambiar la cabecera de la función a 
 long long para que el resultado cupiera en el tipo de datos devuelto por la función. Tambien modificamos el caso base de la función de memoria: al tratarse de un mapa anidado
 y no de un vector de vectores (matriz dinámica), en vez de hacer el típico caso base de if(memo[tamano][pestanyeos] != -1) -> return memo[tamano][pestanyeos]; verificamos si 
-existe la clave pestanyeos dentro del submapa asociado a la clave tamano en memo. Así, evitamos insertar valores por defecto en memo (como -1 si no hemos visitado esa 
-posición en la función de memoria).
+existe la clave pestanyeos dentro del submapa asociado a la clave tamano en memo. Así, evitamos insertar valores por defecto en memo (como -1 si no hemos 
+visitado esa posición en la función de memoria).
+
+Esto lo conseguimos con la función count() que podemos usar en un std::unordered_map (if(memo[tamano].count(pestanyeos)) -> return memo[tamano][pestanyeos]; 
 
 El siguiente caso es cuando el numero de la piedra es 0, en el que simplemente hay que sustituirlo por un 1, pero ahora como los pestañeos se decrementan al procesar cada
 piedra, debemos decrementar el numero de pestañeos.
